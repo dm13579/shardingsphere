@@ -1,0 +1,41 @@
+spring:
+  profiles:
+    #加载配置-分库不分表
+    active: sharding-databases
+#    active: sharding-tables
+    #加载配置-分库也分表
+#    active: sharding-databases-tables
+    # 主从master-slave，读写分离
+#    active: sharding-master-slave
+    # 读写分离+数据分片
+#    active: sharding-masterslave-databases-tables
+    # 使用后端代理-实现分库分表
+#    active: sharding-proxy
+
+  shardingsphere:
+    props:
+      sql:
+        show: true
+
+server:
+  port: 8080
+#server.port=8080
+#
+#  # 实体类路径
+#mybatis.type-aliases-package=com.tl.it.edu.entity
+#
+#  #打印出sql语句
+#  #spring.shardingsphere.props.sql.show = true
+#  #加载配置-分库不分表
+#  #spring.profiles.active=sharding-databases
+#  #分表不分库
+#  #spring.profiles.active=sharding-tables
+#  #加载配置-分库也分表
+#  #spring.profiles.active=sharding-databases-tables
+#  # 主从master-slave，读写分离
+#  #spring.profiles.active=sharding-master-slave
+#  # 读写分离+数据分片
+#  #spring.profiles.active=sharding-masterslave-databases-tables
+#  #使用后端代理-实现分库分表
+
+#spring.profiles.active=sharding-proxy
