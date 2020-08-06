@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
   * @className ShardingjdbcQuickstartApplication 
-  * @description q启动类
+  * @description 启动类
   * @author dm
   * @date 2020/8/5
   * @since JDK1.8

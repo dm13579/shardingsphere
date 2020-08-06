@@ -13,6 +13,7 @@ import java.util.List;
  * @date 2020/8/5
  * @since JDK1.8
  */
+@Mapper
 public interface OrderItemMapper {
 
     @Options(useGeneratedKeys = true, keyProperty = "orderItemId", keyColumn = "order_item_id")
