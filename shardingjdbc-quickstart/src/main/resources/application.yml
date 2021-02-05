@@ -1,22 +1,19 @@
 spring:
   profiles:
-    #加载配置-分库不分表
-#    active: sharding-databases
-    #分表不分库
-#    active: sharding-tables
     #加载配置-分库也分表
-#    active: sharding-databases-tables
+    active: sharding-databases-tables
     # 主从master-slave，读写分离
 #    active: sharding-master-slave
     # 读写分离+数据分片
-    active: sharding-masterslave-databases-tables
+#    active: sharding-masterslave-databases-tables
     # 使用后端代理-实现分库分表
 #    active: sharding-proxy
-
   shardingsphere:
     props:
       sql:
         show: true
-
 server:
   port: 8080
+
+mybatis:
+  mapper-location: classpath:mapper/*.xml

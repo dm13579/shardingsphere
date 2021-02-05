@@ -1,6 +1,9 @@
 package com.dm.shardingsphere.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -12,15 +15,18 @@ import java.io.Serializable;
   * @since JDK1.8
   */
 @Data
-public class OrderItem implements Serializable {
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class TOrderItem implements Serializable {
 
     private static final long serialVersionUID = 5703725470393387012L;
 
-    private long orderItemId;
+    private Long orderItemId;
 
-    private long orderId;
+    private Long orderId;
 
-    private int userId;
+    private Long userId;
 
     private String status;
 
