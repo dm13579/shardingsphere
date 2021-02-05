@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dm.shardingsphere.mapper.OrderItemMapper">
+
+    <select id="selectFullInfo" resultType="com.dm.shardingsphere.entity.TOrderItemFull">
+         SELECT b.address_id,a.* FROM t_order_item a LEFT JOIN t_order b WHERE a.order_id = b.order_id
+    </select>
+</mapper>
